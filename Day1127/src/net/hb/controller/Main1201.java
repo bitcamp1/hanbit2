@@ -1,6 +1,7 @@
 package net.hb.controller;
 
 import net.hb.model.BigNum;
+import net.hb.model.Gugudan;
 import net.hb.model.Multi5;
 import net.hb.model.SimpleCalc;
 
@@ -14,11 +15,16 @@ public class Main1201 {
 		//System.out.println("데이터조회처리 23라인");
 		//System.out.println("데이터삭제처리 35라인");
 		
-		m.getBigNum();
+		//m.getBigNum();
+		
+		m.getFullGugudan();
 		
 		
 		
-		
+	}
+	public void getFullGugudan() {
+		Gugudan ggd = new Gugudan();
+		ggd.getFullGugudan();
 	}
 	public void getBigNum() {
 		BigNum bn = new BigNum();

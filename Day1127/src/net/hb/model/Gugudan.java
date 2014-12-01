@@ -23,7 +23,26 @@ public class Gugudan {
 				System.out.println();
 			}
 		}else{
-			System.out.println("2ºÎÅÍ 9±îÁö Á¤¼ö¸¸ ÀÔ·Â !!");
+			System.out.println("2ì—ì„œ 9ê¹Œì§€ ì •ìˆ˜ê°’ë§Œ ì…ë ¥í•˜ì„¸ìš” !!");
 		}
+	}
+	public void getFullGugudan(){
+		for(su=1;su<10;su++){
+			System.out.println();
+			for(dan=2;dan<6;dan++){
+				System.out.printf("%d * %d = %d\t", dan, su, dan*su);
+				
+			}
+		}
+		System.out.println();
+		for(su=1;su<10;su++){
+			System.out.println();
+			for(dan=6;dan<10;dan++){
+				System.out.printf("%d * %d = %d\t", dan, su, dan*su);
+				
+			}
+		}
+		System.out.println();
+		
 	}
 }
