@@ -38,9 +38,10 @@ public class Toy {
 	}
 	@Override
 	public String toString() {
-		return "인형 [이름=" + getName() + "\n 가격=" + getPrice() + ""
-				+ "\n 사양=" + getSpec()
-				+ "]";
+		return "뽑은 인형 \n ★ 이름=" + getName() 
+				+ "\n ★ 가격=" + getPrice() 
+				+ "\n ★ 사양=" + getSpec()
+				;
 	}
 	
 	

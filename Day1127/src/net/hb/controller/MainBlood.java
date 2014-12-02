@@ -14,8 +14,8 @@ import net.hb.stone.ToySpec.ToyUser;
 public class MainBlood {
 	public static void main(String[] args) {
 		MainBlood m = new MainBlood();
-		m.getKaupIndex();
-		// m.catchToy();
+		// m.getKaupIndex();
+		m.catchToy();
 	}
 
 	public void catchToy() {

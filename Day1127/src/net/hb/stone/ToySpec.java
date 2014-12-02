@@ -17,6 +17,7 @@ public class ToySpec {
 	public enum ToyUser{
 		ADULT, CHILD;
 	}
+	/*
 	public Map<String, Object> getProps() {
 		return props;
 	}
@@ -24,11 +25,13 @@ public class ToySpec {
 	public void setProps(Map<String, Object> props) {
 		this.props = props;
 	}
-	public Object getProps(String name) {
-		return props.get(name);
+	*/
+	public Object getProps(String pName) {
+		return props.get(pName);
 	}
-	public void setProps(String key, Object value) {
-		props.put(key, value);
+	
+	public void setProps(String pName, Object pValue) {
+		props.put(pName, pValue);
 	}
 	public boolean match(ToySpec spec){ // 비교검색
 		String specStr = "";
@@ -45,8 +48,15 @@ public class ToySpec {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
 		return super.equals(obj);
+	}
+	/*
+	 * toString()을 선언하지 않으면 주소값만 출력된다.
+	 * */
+	
+	@Override
+	public String toString() {
+		return props.toString();
 	}
 
 	
