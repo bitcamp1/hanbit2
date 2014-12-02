@@ -2,6 +2,7 @@ package net.hb.controller;
 
 import net.hb.model.IndexOfEx;
 import net.hb.model.Juso;
+import net.hb.model.ManOrWoman;
 import net.hb.model.ModifyChars;
 
 public class Main1202 {
@@ -9,8 +10,15 @@ public class Main1202 {
 		Main1202 m = new Main1202();
 	//	m.arrayTest();
 	//	m.indexOfEx();
-		m.modifyChars();
+	//	m.modifyChars();
+		m.isManOrWoman();
 	}
+	public void isManOrWoman(){
+		ManOrWoman mw = new ManOrWoman();
+		mw.isManOrWoman();
+		mw.outputSsnBack();
+	}
+	
 	public void modifyChars(){
 		ModifyChars mc = new ModifyChars();
 		mc.modifyChars();
