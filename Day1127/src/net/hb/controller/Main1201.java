@@ -17,22 +17,10 @@ public class Main1201 {
 		
 		//m.getBigNum();
 		
-		//m.getFullGugudan();
-		
-		m.arrayTest();
+		m.getFullGugudan();
 		
 		
 		
-	}
-	public void arrayTest() {
-		String[] juso = new String[3];
-		juso[0] = "서울";
-		juso[1] = "구리";
-		juso[2] = "수원";
-		
-		for(int i=0;i<juso.length;i++){
-			System.out.println(juso[i] + "");
-		}
 	}
 	public void getFullGugudan() {
 		Gugudan ggd = new Gugudan();
