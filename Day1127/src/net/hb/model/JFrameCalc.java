@@ -111,7 +111,7 @@ public class JFrameCalc extends JFrame{
 			}
 			if(inputVal != null){
 				value = Integer.parseInt(inputVal);
-				NumberFormat nf = new DecimalFormat("#.#");
+				
 				switch(opcode){
 				case '+' : result += value;break;
 				case '-' : result -= value;break;
@@ -119,6 +119,7 @@ public class JFrameCalc extends JFrame{
 				case '/' : result /= value;break;
 				default : result = value;break;
 				}
+			
 				label.setText(Integer.toString(result));
 			}
 			inputVal = null;

@@ -1,17 +1,32 @@
 package net.hb.controller;
 
+import java.util.Scanner;
+
+import net.hb.model.AssertGugudan;
+
 public class Main1204 {
 	public static void main(String[] args) {
 		Main1204 m = new Main1204();
 		
+		
+		m.showAssertionGugudan(args);
+		
+		
+		
 		// m.sumEx(m);
 		
-		m.tryCatchEx(m);
+		// m.tryCatchEx(m);
 		
+	}
+	public void showAssertionGugudan(String[] args) {
+		AssertGugudan ag = new AssertGugudan();
 		
-		
-		
-		
+		try {
+			int dan = 12;
+			ag.gugudan(dan);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	public  void tryCatchEx(Main1204 m) {
 		int a=5, b=0;
@@ -20,9 +35,8 @@ public class Main1204 {
 		try {
 			mok=a/b;
 			nmg=a%b;
-		} catch (Exception e) {
-			//e.printStackTrace();
-			m.handleError("에러 : "+e.toString());
+		} catch (ArithmeticException e) {
+			System.out.println("0으로 나눌수 없습니다.");
 		}
 		System.out.println(a+" / "+b+" = "+mok);
 		System.out.println(a+" % "+b+" = "+nmg);
