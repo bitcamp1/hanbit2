@@ -36,6 +36,7 @@ public class SimpleCalc {
 		case '*': result = (float) (a*b);break;
 		case '/': result = Float.parseFloat(nf.format((a/b))) ;break;
 		case '%': result = (float) (a%b);break;
+		default : result = null;break;
 		}		
 		
 	}
