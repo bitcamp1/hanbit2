@@ -1,76 +1,45 @@
 package net.hb.model;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class SimpleCalc {
 	
-	int plus;
-	String minus;
-	String multi;
-	String divi;
-	String nmg;
-
+	int a;
+	int b;
+	Float result = (float) 0.0;
 	
-
-	public int getPlus() {
-		return plus;
+	public SimpleCalc() {
+		
 	}
-
-
-
-	public void setPlus(int a, int b) {
-		this.plus = a + b;
+	public int getA(int a) {
+		return a;
 	}
-
-
-
-	public String getMinus() {
-		return minus;
+	public void setA(int a) {
+		this.a = a;
 	}
-
-
-
-	public void setMinus(String minus) {
-		this.minus = minus;
+	public int getB(int b) {
+		return b;
 	}
-
-
-
-	public String getMulti() {
-		return multi;
+	public void setB(int b) {
+		this.b = b;
 	}
-
-
-
-	public void setMulti(String multi) {
-		this.multi = multi;
+	public float getResult() {
+		return result;
 	}
-
-
-
-	public String getDivi() {
-		return divi;
+	public void setResult(int a,char op, int b) {
+		NumberFormat nf = new DecimalFormat("#.#");
+		
+		switch(op){
+		case '+': result = (float) (a+b);break;
+		case '-': result = Float.parseFloat(nf.format(a-b));break;
+		case '*': result = (float) (a*b);break;
+		case '/': result = Float.parseFloat(nf.format((a/b))) ;break;
+		case '%': result = (float) (a%b);break;
+		}		
+		
 	}
-
-
-
-	public void setDivi(String divi) {
-		this.divi = divi;
-	}
-
-
-
-	public String getNmg() {
-		return nmg;
-	}
-
-
-
-	public void setNmg(String nmg) {
-		this.nmg = nmg;
-	}
-
-
-
+	
 	
 	
 	

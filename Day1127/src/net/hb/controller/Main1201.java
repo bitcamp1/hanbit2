@@ -1,5 +1,7 @@
 package net.hb.controller;
 
+import java.util.Scanner;
+
 import net.hb.model.BigNum;
 import net.hb.model.Gugudan;
 import net.hb.model.Multi5;
@@ -8,7 +10,7 @@ import net.hb.model.SimpleCalc;
 public class Main1201 {
 	public static void main(String[] args) {
 		Main1201 m = new Main1201();
-		//m.getSimpleCalc();
+		m.getSumAvg(); 
 		//m.altShiftM();
 		
 		//System.out.println("데이터등록처리 50라인");
@@ -17,7 +19,7 @@ public class Main1201 {
 		
 		//m.getBigNum();
 		
-		m.getFullGugudan();
+		// m.getFullGugudan();
 		
 		
 		
@@ -38,14 +40,26 @@ public class Main1201 {
 	public void dbDelete(){}
 	
 
-	public void getSimpleCalc() {
-		SimpleCalc sc = new SimpleCalc();
-		int eng = 85;
-		int kor = 90;
-		sc.setPlus(eng, kor);
-		
-		System.out.println(sc.getPlus());
+	public void getSumAvg(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("영어점수 입력");
+		int eng = sc.nextInt();
+		System.out.println("국어점수 입력");
+		int kor = sc.nextInt();
+		Main1201 m = new Main1201();
+		m.setSum(eng,kor);
 	}
+	
+	public void setSum(int a,int b) {
+		
+		
+		SimpleCalc cal = new SimpleCalc();
+			cal.setResult(a, '+', b);
+			System.out.println("총합 :"+cal.getResult());
+			cal.setResult((int)cal.getResult(), '/', 2);
+			System.out.println("평균 :"+cal.getResult());
+	}
+
 
 	public void altShiftM() {
 		Multi5 dh = new Multi5();
