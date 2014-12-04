@@ -1,5 +1,7 @@
 package net.hb.model;
 
+import java.util.InputMismatchException;
+
 public class Gugudan {
 	int dan = 0;
 	int su = 0;
@@ -16,15 +18,18 @@ public class Gugudan {
 		this.su = su;
 	}
 	public void getGugudan(int dan){
-		if(dan>=2&&dan<=9){
-			for (int a = 0; a < 10; a++) {
-				//System.out.println(dan+"*"+a+"="+(dan*a));
-				System.out.printf("%d * %d = %d\t",dan,a,dan*a);
-				System.out.println();
+		
+			if(dan>=2&&dan<=9){
+				for (int a = 0; a < 10; a++) {
+					//System.out.println(dan+"*"+a+"="+(dan*a));
+					System.out.printf("%d * %d = %d\t",dan,a,dan*a);
+					System.out.println();
+				}
+			}else{
+				System.out.println("2에서 9까지 정수값만 입력하세요 !!");
 			}
-		}else{
-			System.out.println("2에서 9까지 정수값만 입력하세요 !!");
-		}
+	
+		
 	}
 	public void getFullGugudan(){
 		for(su=1;su<10;su++){

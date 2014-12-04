@@ -1,5 +1,7 @@
 package net.hb.controller;
 
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import net.hb.model.Gugudan;
@@ -7,15 +9,31 @@ import net.hb.model.NowTime;
 
 public class Main1127 {
 	public static void main(String[] args) {
+		Main1127 m = new Main1127();
+		m.showGugudan();
+		// m.showCurTime();
+		// m.sumKorAndEng();
+	}
+
+	public void showGugudan() {
+		
+		while(true){
+			System.out.print("단 입력? ");
+			try {
+				Scanner sc = new Scanner(System.in);
+				Gugudan ggd = new Gugudan();
+				ggd.getGugudan(sc.nextInt());
+			} catch (InputMismatchException e) {
+				System.out.println("2부터 9까지 정수만 입력하세요");
+			}catch(NoSuchElementException e2){
+				System.out.println("프로그램을 종료합니다.");
+			}
+		}
+	
+	}
+
+	public void sumKorAndEng() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("단 입력? ");
-		Gugudan ggd = new Gugudan();
-		ggd.getGugudan(sc.nextInt());
-		
-		
-		NowTime nt = new NowTime();
-		System.out.println("\n\n 현재시간 ? "+nt.getCurTime());
-		
 		System.out.println("국어점수 ? ");
 		int kor=0,eng=0;
 		kor=sc.nextInt();
@@ -25,5 +43,10 @@ public class Main1127 {
 		System.out.println("국어="+kor);
 		System.out.println("영어="+eng);
 		System.out.println("합계="+(kor+eng));
+	}
+
+	public  void showCurTime() {
+		NowTime nt = new NowTime();
+		System.out.println("\n\n 현재시간 ? "+nt.getCurTime());
 	}
 }
