@@ -1,7 +1,9 @@
 package net.hb.controller;
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import net.hb.model.HanbitDayCounter;
 import net.hb.model.MatchGame;
 import net.hb.model.MatchGame2;
 import net.hb.model.StringTokenizerEx;
@@ -16,8 +18,25 @@ public class Main1205 {
 		// m.exeStringBuffer();
 		// m.exeStringTokenizer();
 		// m.matchGame();
-		m.matchGame2();
+		// m.matchGame2();
+		
+		m.countHanbit();
 	}
+	public void countHanbit(){
+		HanbitDayCounter hdc = new HanbitDayCounter();
+		int counter = 0;
+		while(true){
+			try {
+				hdc.token();
+			} catch (NoSuchElementException e) {
+				System.out.println("...");
+			}
+			counter++;
+			if(counter==2)break;
+		}
+		
+	}
+	
 	public void matchGame2(){
 		MatchGame2 mg2 = new MatchGame2();
 		System.out.println("☆☆☆☆ 최단횟수로 맞추는 사람이 승리하는 게임입니다.");
