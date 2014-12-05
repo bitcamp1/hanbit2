@@ -36,8 +36,16 @@ public class Main1205 {
 				
 				playerNum = sc.nextInt();
 				mg2.setPlayer(playerNum);
+				playerNum = mg2.getPlayer();
+				if(playerNum<1 || playerNum>100 ){
+					System.out.println("1부터 100 까지 정수만 입력해야 합니다.");
+					continue;
+				}else{
+					
+				}
 			} catch (InputMismatchException e) {
 				System.out.println("문자는 안됩니다.");
+				continue;
 			}
 			if(playerNum==0){
 				System.out.println("다시 입력해 주십시오.");

@@ -30,11 +30,8 @@ public class MatchGame2 {
 	}
 
 	public void setPlayer(int player) {
-		if(player<1 || player>100 ){
-			System.out.println("1부터 100 까지 정수만 입력해야 합니다.");
-		}else{
-			this.player = player;
-		}
+		this.player = player;
+		
 	}
 
 	public int getCom() {
